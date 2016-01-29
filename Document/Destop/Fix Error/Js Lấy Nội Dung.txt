@@ -1,0 +1,33 @@
+﻿clear()
+/*Xóa nội dung của wraper thừa*/
+var head = document.getElementById('header');
+head.parentNode.removeChild(head);
+
+var s = document.getElementsByClassName('fluid-width-video-wrapper');
+if(s[0]!=null){
+	s[0].parentNode.removeChild(s[0]);
+}
+/*Xóa 2 thành phần thừa thẻ div và thẻ p đầu tiên*/
+var k= document.getElementById('show-adv');
+var x=k.getElementsByTagName('div');
+x[0].parentNode.removeChild(x[0]);
+
+var y=k.getElementsByTagName('p');
+y[0].parentNode.removeChild(y[0]);
+
+/*Xoa 2 the ben trong content*/
+var t = document.getElementById('show-adv');
+var v = t.getElementsByTagName('p');
+v[0].parentNode.removeChild(v[0]);
+
+var vv = t.getElementsByTagName('div');
+vv[0].parentNode.removeChild(vv[0]);
+
+/*Xóa đoạn cuối*/
+var z=document.getElementsByClassName('post-container');
+
+var demo =z[0].childNodes[5];
+demo.parentNode.removeChild(demo);
+
+
+z[0].outerHTML;

@@ -1,0 +1,36 @@
+﻿http://hocvien.stanford.com.vn/showthread.php/1638-Asp-net-jquery-Slide-Show-voi-Panels
+http://hocvien.stanford.com.vn/showthread.php/1664-Tai-tiep-du-lieu-kieu-Facebook-voi-jQuery-AJAX-trong-ASP-Net-va-SQL-server
+http://hocvien.stanford.com.vn/showthread.php/1646-Asp-net-su-dung-the-Marquee-hien-thi-nhung-bai-viet-moi-nhat
+http://hocvien.stanford.com.vn/showthread.php/1658-Boc-tach-du-lieu-Lay-tin-tu-dong-tu-vnexpress-luu-xuong-Database-P1
+http://hocvien.stanford.com.vn/showthread.php/1665-Giai-phap-Session-timeout-trong-ASP-NET
+
+đôi khi ta phải sử dụng SingleOrDefault để nó trả ra 1 dòng và tiến hành update trên dòng đấy
+
+lam them xem thong tin ca nhan
+upload Image
+
+Chú ý: Xử lý phân cấp cho 2 tài chuyen mục bài viết
+
+làm bình luận giống như ở 
+https://mmo4me.com/threads/expps-kiemtien2s-fanpage-quay-so-may-man.271143/
+
+Nút chia sẻ
+http://dotnet.edu.vn/ChuyenMuc/Nhung-nut-chia-se-link-len-cac-trang-mang-xa-hoi-trong-ASPNET-547.aspx
+rất hay
+http://forum.alphatek.edu.vn/threads/105715-Su-dung-chuc-nang-Facebook-Share-trong-ASP-Net.html
+
+
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+        Account <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a tabindex="-1" href="#">My Account</a></li>
+        <li class="divider"></li>
+        <li><a tabindex="-1" href="#">Change Email</a></li>
+        <li><a tabindex="-1" href="#">Change Password</a></li>
+        <li class="divider"></li>
+        <li><a tabindex="-1" href="#">Logout</a></li>
+    </ul>
+</li>

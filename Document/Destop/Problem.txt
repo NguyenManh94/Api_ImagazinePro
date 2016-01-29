@@ -1,0 +1,39 @@
+﻿Bây giờ tôi phải tìm làm cách nào để gọi ở client web API
+Tôi sẽ sử dụng của Helebert
+76579-1E116-4F70E-2D2F7
+kinh nghiệm cho kiểm tra tài khoản là đưa nó về toUperCase hết
+kể cả tìm kiếm ta cũng sẽ đưa nó về to UperCase
+
+học toàn bộ trong tài liệu- slide- video của
+https://www.youtube.com/watch?v=vt8jyvLfhqw
+anh Võ Duy Tân
+http://vietjack.com/jquery/ajaxsend.jsp -- Jquery: Ajax
+và video tiếp tại
+https://www.youtube.com/watch?v=R2SqHXBtlg8
+tut của Freetuts về Jquery- Ajax
+
+Cái này còn khá tuyệt vời luôn này: Xây dựng ứng dụng CRUD: MVC sử dụng Entity Framework WebAPI: Có serilize JSON 
+https://www.youtube.com/watch?v=8dwOlEAQV10
+chú ý xem thêm của Hearlybearth
+
+
+Chú ý: Sử dụng đăng ký phân quyền có thể bàng windows authentication
+
+http://megacode.vn/files/view/load-du-lieu-kieu-facebook-voi-jquery-ajax-trong-asp-net-va-sql-server-2465.html
+https://www.izwebz.com/jquery/basic-loading-data-with-jquery-ajax-json/
+
+
+
+
+
+Chú ý kiểm tra tên tài khoản đăng ký trùng là cho next ngay
+
+Nếu còn thời gian thì tích hợp thêm đăng nhập facebook vào website
+
+
+
+
+
+
+
+
