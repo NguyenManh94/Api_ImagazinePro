@@ -10,7 +10,7 @@ using System.Web.Http.Description;
 
 namespace IMagazineProgramming.Controllers.ApiControllers
 {
-    public class CateController : ApiController
+    public class CateController: ApiController
     {
         /*Lấy ra toàn bộ ảnh trong danh sách*/
         public IEnumerable<Cate> GetAll()
