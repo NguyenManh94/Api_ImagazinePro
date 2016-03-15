@@ -25,9 +25,14 @@
     <script src="~/Scripts/JqueryExtent/jqFancyTransitions.1.8.min.js"></script>
     @* Set width: Khắc phục lỗi hiện thanh scrollbar ở dưới *@
     <style>
-        .pointer { cursor: pointer; }
+        .pointer {
+            cursor: pointer;
+        }
 
-        html, body { max-width: 100% !important; overflow-x: hidden !important; }
+        html, body {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+        }
     </style>
 </head>
 
@@ -48,7 +53,7 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 header-topr">
                         <div class="inbox">
                             <h5 style="margin-top: 5px;">
-                                @if (Session["username"] == null || (string) Session["username"] == "")
+                                @if (Session["username"] == null || (string)Session["username"] == "")
                                 {
                                     <a class="link-headtop" id="linkAdmin" href="#">
                                         <span class="glyphicon glyphicon-user"></span>
@@ -193,8 +198,6 @@
 
         <div class="containt" id="bindingAll" style="width: 99%; margin: 0 auto;">
             @RenderBody()
-
-
         </div>
         <!--containt-->
         <div class="container-fluid" style="height: 20px;"></div><!--phanvung-->

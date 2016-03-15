@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace IMagazineProgramming
 {
-    public class Global : HttpApplication
+    public class Global: HttpApplication
     {
         void Application_Start(object sender, EventArgs e)
         {
