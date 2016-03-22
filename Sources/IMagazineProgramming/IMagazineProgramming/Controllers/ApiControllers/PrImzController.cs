@@ -16,7 +16,7 @@ namespace IMagazineProgramming.Controllers.ApiControllers
         /// Get All Post in Database
         /// </summary>
         /// <returns></returns>
-        /// 
+        ///
         public string GetPosts()
         {
             using (var db = new MagazineProgramingEntities())

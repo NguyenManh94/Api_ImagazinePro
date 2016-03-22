@@ -12,6 +12,8 @@ namespace IMagazineProgramming.Controllers.ApiControllers
     public class CommentCvrtController : ApiController
     {
         private readonly MagazineProgramingEntities _db = new MagazineProgramingEntities();
+
+
         public IHttpActionResult GetComment(int id)
         {
             var comment = from cm in _db.Comments

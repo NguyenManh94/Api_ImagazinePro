@@ -181,10 +181,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\MagazinePrograming.mdf" />
-    <Content Include="App_Data\MagazinePrograming_log.ldf">
-      <DependentUpon>MagazinePrograming.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
