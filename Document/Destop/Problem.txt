@@ -22,6 +22,8 @@ Chú ý: Sử dụng đăng ký phân quyền có thể bàng windows authentica
 http://megacode.vn/files/view/load-du-lieu-kieu-facebook-voi-jquery-ajax-trong-asp-net-va-sql-server-2465.html
 https://www.izwebz.com/jquery/basic-loading-data-with-jquery-ajax-json/
 
+Gửi Email từ web bằng giao thức SSL và SMTP
+
 
 
 
