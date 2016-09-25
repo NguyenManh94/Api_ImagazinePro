@@ -14,12 +14,6 @@ namespace IMagazineProgramming.Models
     
     public partial class Post
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Post()
-        {
-            this.Comments = new HashSet<Comment>();
-        }
-    
         public int Id { get; set; }
         public int IdAccount { get; set; }
         public int IdSCategory { get; set; }
@@ -32,8 +26,6 @@ namespace IMagazineProgramming.Models
         public int Viewed { get; set; }
     
         public virtual Account Account { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
         public virtual SCategory SCategory { get; set; }
     }
 }

@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -239,6 +240,16 @@
     <Content Include="Images\Members\username5\avarta-user5.png" />
     <Content Include="Images\Members\username6\avarta-user6.png" />
     <Content Include="Images\Members\username7\avarta-user7.png" />
+    <Content Include="Models\ImgzProg.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImgzProg.edmx</DependentUpon>
+      <LastGenOutput>ImgzProg.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ImgzProg.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImgzProg.edmx</DependentUpon>
+      <LastGenOutput>ImgzProg.cs</LastGenOutput>
+    </Content>
     <Content Include="Plugin\AdminTemplate\css\animate.min.css" />
     <Content Include="Plugin\AdminTemplate\css\bootstrap.min.css" />
     <Content Include="Plugin\AdminTemplate\css\calendar\fullcalendar.css" />
@@ -926,22 +937,12 @@
     <Content Include="Scripts\Bootstrap\bootstrap-hover-dropdown.min.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.js" />
     <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
-    <EntityDeploy Include="Models\ImgzProgModel.edmx">
+    <EntityDeploy Include="Models\ImgzProg.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ImgzProgModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ImgzProg.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\ImgzProgModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
-      <LastGenOutput>ImgzProgModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ImgzProgModel.edmx.diagram">
-      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\ImgzProgModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
-      <LastGenOutput>ImgzProgModel.cs</LastGenOutput>
+    <Content Include="Models\ImgzProg.edmx.diagram">
+      <DependentUpon>ImgzProg.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\taptrilaptrinh - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\taptrilaptrinh - Web Deploy.pubxml" />
@@ -990,43 +991,43 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Comment.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ExtendModel\Cate.cs" />
     <Compile Include="Models\ExtendModel\CommentCvrt.cs" />
     <Compile Include="Models\ExtendModel\PostContent.cs" />
-    <Compile Include="Models\ImgzProgModel.Context.cs">
+    <Compile Include="Models\ImgzProg.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ImgzProgModel.Context.tt</DependentUpon>
+      <DependentUpon>ImgzProg.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ImgzProgModel.cs">
+    <Compile Include="Models\ImgzProg.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ImgzProgModel.Designer.cs">
+    <Compile Include="Models\ImgzProg.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ImgzProgModel.edmx</DependentUpon>
+      <DependentUpon>ImgzProg.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Post.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Promotion.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SCategory.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Traffic.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\XCategory.cs">
-      <DependentUpon>ImgzProgModel.tt</DependentUpon>
+      <DependentUpon>ImgzProg.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

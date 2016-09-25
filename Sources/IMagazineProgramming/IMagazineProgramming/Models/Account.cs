@@ -17,7 +17,6 @@ namespace IMagazineProgramming.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Account()
         {
-            this.Comments = new HashSet<Comment>();
             this.Posts = new HashSet<Post>();
         }
     
@@ -33,8 +32,6 @@ namespace IMagazineProgramming.Models
         public Nullable<System.DateTime> TimeEnd { get; set; }
         public Nullable<bool> Active { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Post> Posts { get; set; }
     }
