@@ -633,7 +633,7 @@ $.widget("ui.mouse", {
 			})
 			.bind('click.'+this.widgetName, function(event) {
 				if (true === $.data(event.target, self.widgetName + '.preventClickEvent')) {
-				    $.removeData(event.target, self.widgetName + '.preventClickEvent');
+						$.removeData(event.target, self.widgetName + '.preventClickEvent');
 					event.stopImmediatePropagation();
 					return false;
 				}
@@ -737,7 +737,7 @@ $.widget("ui.mouse", {
 			this._mouseStarted = false;
 
 			if (event.target == this._mouseDownEvent.target) {
-			    $.data(event.target, this.widgetName + '.preventClickEvent', true);
+					$.data(event.target, this.widgetName + '.preventClickEvent', true);
 			}
 
 			this._mouseStop(event);
@@ -1133,7 +1133,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 		];
 
 		if(!(/^(document|window|parent)$/).test(o.containment) && o.containment.constructor != Array) {
-		        var c = $(o.containment);
+						var c = $(o.containment);
 			var ce = c[0]; if(!ce) return;
 			var co = c.offset();
 			var over = ($(ce).css("overflow") != 'hidden');
@@ -1187,17 +1187,17 @@ $.widget("ui.draggable", $.ui.mouse, {
 		 */
 
 		if(this.originalPosition) { //If we are not dragging yet, we won't check for options
-		         var containment;
-		         if(this.containment) {
+						 var containment;
+						 if(this.containment) {
 				 if (this.relative_container){
-				     var co = this.relative_container.offset();
-				     containment = [ this.containment[0] + co.left,
-						     this.containment[1] + co.top,
-						     this.containment[2] + co.left,
-						     this.containment[3] + co.top ];
+						 var co = this.relative_container.offset();
+						 containment = [ this.containment[0] + co.left,
+								 this.containment[1] + co.top,
+								 this.containment[2] + co.left,
+								 this.containment[3] + co.top ];
 				 }
 				 else {
-				     containment = this.containment;
+						 containment = this.containment;
 				 }
 
 				if(event.pageX - this.offset.click.left < containment[0]) pageX = containment[0] + this.offset.click.left;
@@ -2124,8 +2124,8 @@ $.widget("ui.resizable", $.ui.mouse, {
 		//Aspect Ratio
 		this.aspectRatio = (typeof o.aspectRatio == 'number') ? o.aspectRatio : ((this.originalSize.width / this.originalSize.height) || 1);
 
-	    var cursor = $('.ui-resizable-' + this.axis).css('cursor');
-	    $('body').css('cursor', cursor == 'auto' ? this.axis + '-resize' : cursor);
+			var cursor = $('.ui-resizable-' + this.axis).css('cursor');
+			$('body').css('cursor', cursor == 'auto' ? this.axis + '-resize' : cursor);
 
 		el.addClass("ui-resizable-resizing");
 		this._propagate("start", event);
@@ -2205,31 +2205,31 @@ $.widget("ui.resizable", $.ui.mouse, {
 
 	},
 
-    _updateVirtualBoundaries: function(forceAspectRatio) {
-        var o = this.options, pMinWidth, pMaxWidth, pMinHeight, pMaxHeight, b;
+		_updateVirtualBoundaries: function(forceAspectRatio) {
+				var o = this.options, pMinWidth, pMaxWidth, pMinHeight, pMaxHeight, b;
 
-        b = {
-            minWidth: isNumber(o.minWidth) ? o.minWidth : 0,
-            maxWidth: isNumber(o.maxWidth) ? o.maxWidth : Infinity,
-            minHeight: isNumber(o.minHeight) ? o.minHeight : 0,
-            maxHeight: isNumber(o.maxHeight) ? o.maxHeight : Infinity
-        };
+				b = {
+						minWidth: isNumber(o.minWidth) ? o.minWidth : 0,
+						maxWidth: isNumber(o.maxWidth) ? o.maxWidth : Infinity,
+						minHeight: isNumber(o.minHeight) ? o.minHeight : 0,
+						maxHeight: isNumber(o.maxHeight) ? o.maxHeight : Infinity
+				};
 
-        if(this._aspectRatio || forceAspectRatio) {
-            // We want to create an enclosing box whose aspect ration is the requested one
-            // First, compute the "projected" size for each dimension based on the aspect ratio and other dimension
-            pMinWidth = b.minHeight * this.aspectRatio;
-            pMinHeight = b.minWidth / this.aspectRatio;
-            pMaxWidth = b.maxHeight * this.aspectRatio;
-            pMaxHeight = b.maxWidth / this.aspectRatio;
+				if(this._aspectRatio || forceAspectRatio) {
+						// We want to create an enclosing box whose aspect ration is the requested one
+						// First, compute the "projected" size for each dimension based on the aspect ratio and other dimension
+						pMinWidth = b.minHeight * this.aspectRatio;
+						pMinHeight = b.minWidth / this.aspectRatio;
+						pMaxWidth = b.maxHeight * this.aspectRatio;
+						pMaxHeight = b.maxWidth / this.aspectRatio;
 
-            if(pMinWidth > b.minWidth) b.minWidth = pMinWidth;
-            if(pMinHeight > b.minHeight) b.minHeight = pMinHeight;
-            if(pMaxWidth < b.maxWidth) b.maxWidth = pMaxWidth;
-            if(pMaxHeight < b.maxHeight) b.maxHeight = pMaxHeight;
-        }
-        this._vBoundaries = b;
-    },
+						if(pMinWidth > b.minWidth) b.minWidth = pMinWidth;
+						if(pMinHeight > b.minHeight) b.minHeight = pMinHeight;
+						if(pMaxWidth < b.maxWidth) b.maxWidth = pMaxWidth;
+						if(pMaxHeight < b.maxHeight) b.maxHeight = pMaxHeight;
+				}
+				this._vBoundaries = b;
+		},
 
 	_updateCache: function(data) {
 		var o = this.options;
@@ -2568,7 +2568,7 @@ $.ui.plugin.add("resizable", "containment", {
 					hoset = Math.abs( (self._helper ? self.offset.top - cop.top : (self.offset.top - co.top)) + self.sizeDiff.height );
 
 		var isParent = self.containerElement.get(0) == self.element.parent().get(0),
-		    isOffsetRelative = /relative|absolute/.test(self.containerElement.css('position'));
+				isOffsetRelative = /relative|absolute/.test(self.containerElement.css('position'));
 
 		if(isParent && isOffsetRelative) woset -= self.parentData.left;
 
@@ -4445,7 +4445,7 @@ function _normalizeArguments(effect, options, speed, callback) {
 		speed = null;
 		options = {};
 	}
-        if (typeof options == 'number' || $.fx.speeds[options]) {
+				if (typeof options == 'number' || $.fx.speeds[options]) {
 		callback = speed;
 		speed = options;
 		options = {};
@@ -6920,9 +6920,9 @@ var dpuuid = new Date().getTime();
 var instActive;
 
 /* Date picker manager.
-   Use the singleton instance of this class, $.datepicker, to interact with the date picker.
-   Settings for (groups of) date pickers are maintained in an instance object,
-   allowing multiple different settings on the same page. */
+	 Use the singleton instance of this class, $.datepicker, to interact with the date picker.
+	 Settings for (groups of) date pickers are maintained in an instance object,
+	 allowing multiple different settings on the same page. */
 
 function Datepicker() {
 	this.debug = false; // Change this to true to start debugging
@@ -7032,16 +7032,16 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Override the default settings for all instances of the date picker.
-	   @param  settings  object - the new settings to use as defaults (anonymous object)
-	   @return the manager object */
+		 @param  settings  object - the new settings to use as defaults (anonymous object)
+		 @return the manager object */
 	setDefaults: function(settings) {
 		extendRemove(this._defaults, settings || {});
 		return this;
 	},
 
 	/* Attach the date picker to a jQuery selection.
-	   @param  target    element - the target input field or division or span
-	   @param  settings  object - the new settings to use for this date picker instance (anonymous) */
+		 @param  target    element - the target input field or division or span
+		 @param  settings  object - the new settings to use for this date picker instance (anonymous) */
 	_attachDatepicker: function(target, settings) {
 		// check for settings on the control itself - in namespace 'date:'
 		var inlineSettings = null;
@@ -7195,14 +7195,14 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Pop-up the date picker in a "dialog" box.
-	   @param  input     element - ignored
-	   @param  date      string or Date - the initial date to display
-	   @param  onSelect  function - the function to call when a date is selected
-	   @param  settings  object - update the dialog date picker instance's settings (anonymous object)
-	   @param  pos       int[2] - coordinates for the dialog's position within the screen or
-	                     event - with x/y coordinates or
-	                     leave empty for default (screen centre)
-	   @return the manager object */
+		 @param  input     element - ignored
+		 @param  date      string or Date - the initial date to display
+		 @param  onSelect  function - the function to call when a date is selected
+		 @param  settings  object - update the dialog date picker instance's settings (anonymous object)
+		 @param  pos       int[2] - coordinates for the dialog's position within the screen or
+											 event - with x/y coordinates or
+											 leave empty for default (screen centre)
+		 @return the manager object */
 	_dialogDatepicker: function(input, date, onSelect, settings, pos) {
 		var inst = this._dialogInst; // internal instance
 		if (!inst) {
@@ -7243,7 +7243,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Detach a datepicker from its control.
-	   @param  target    element - the target input field or division or span */
+		 @param  target    element - the target input field or division or span */
 	_destroyDatepicker: function(target) {
 		var $target = $(target);
 		var inst = $.data(target, PROP_NAME);
@@ -7265,7 +7265,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Enable the date picker to a jQuery selection.
-	   @param  target    element - the target input field or division or span */
+		 @param  target    element - the target input field or division or span */
 	_enableDatepicker: function(target) {
 		var $target = $(target);
 		var inst = $.data(target, PROP_NAME);
@@ -7290,7 +7290,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Disable the date picker to a jQuery selection.
-	   @param  target    element - the target input field or division or span */
+		 @param  target    element - the target input field or division or span */
 	_disableDatepicker: function(target) {
 		var $target = $(target);
 		var inst = $.data(target, PROP_NAME);
@@ -7316,8 +7316,8 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Is the first field in a jQuery collection disabled as a datepicker?
-	   @param  target    element - the target input field or division or span
-	   @return boolean - true if disabled, false if enabled */
+		 @param  target    element - the target input field or division or span
+		 @return boolean - true if disabled, false if enabled */
 	_isDisabledDatepicker: function(target) {
 		if (!target) {
 			return false;
@@ -7330,9 +7330,9 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Retrieve the instance data for the target control.
-	   @param  target  element - the target input field or division or span
-	   @return  object - the associated instance data
-	   @throws  error if a jQuery problem getting data */
+		 @param  target  element - the target input field or division or span
+		 @return  object - the associated instance data
+		 @throws  error if a jQuery problem getting data */
 	_getInst: function(target) {
 		try {
 			return $.data(target, PROP_NAME);
@@ -7343,13 +7343,13 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Update or retrieve the settings for a date picker attached to an input field or division.
-	   @param  target  element - the target input field or division or span
-	   @param  name    object - the new settings to update or
-	                   string - the name of the setting to change or retrieve,
-	                   when retrieving also 'all' for all instance settings or
-	                   'defaults' for all global defaults
-	   @param  value   any - the new value for the setting
-	                   (omit if above is an object or to retrieve a value) */
+		 @param  target  element - the target input field or division or span
+		 @param  name    object - the new settings to update or
+										 string - the name of the setting to change or retrieve,
+										 when retrieving also 'all' for all instance settings or
+										 'defaults' for all global defaults
+		 @param  value   any - the new value for the setting
+										 (omit if above is an object or to retrieve a value) */
 	_optionDatepicker: function(target, name, value) {
 		var inst = this._getInst(target);
 		if (arguments.length == 2 && typeof name == 'string') {
@@ -7389,7 +7389,7 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Redraw the date picker attached to an input field or division.
-	   @param  target  element - the target input field or division or span */
+		 @param  target  element - the target input field or division or span */
 	_refreshDatepicker: function(target) {
 		var inst = this._getInst(target);
 		if (inst) {
@@ -7398,8 +7398,8 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Set the dates for a jQuery selection.
-	   @param  target   element - the target input field or division or span
-	   @param  date     Date - the new date */
+		 @param  target   element - the target input field or division or span
+		 @param  date     Date - the new date */
 	_setDateDatepicker: function(target, date) {
 		var inst = this._getInst(target);
 		if (inst) {
@@ -7410,9 +7410,9 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Get the date(s) for the first entry in a jQuery selection.
-	   @param  target     element - the target input field or division or span
-	   @param  noDefault  boolean - true if no default date is to be used
-	   @return Date - the current date */
+		 @param  target     element - the target input field or division or span
+		 @param  noDefault  boolean - true if no default date is to be used
+		 @return Date - the current date */
 	_getDateDatepicker: function(target, noDefault) {
 		var inst = this._getInst(target);
 		if (inst && !inst.inline)
@@ -7529,9 +7529,9 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Pop-up the date picker for a given input field.
-       If false returned from beforeShow event handler do not show. 
-	   @param  input  element - the input field attached to the date picker or
-	                  event - if triggered by focus */
+			 If false returned from beforeShow event handler do not show. 
+		 @param  input  element - the input field attached to the date picker or
+										event - if triggered by focus */
 	_showDatepicker: function(input) {
 		input = input.target || input;
 		if (input.nodeName.toLowerCase() != 'input') // find from button/image trigger
@@ -7548,7 +7548,7 @@ $.extend(Datepicker.prototype, {
 		var beforeShow = $.datepicker._get(inst, 'beforeShow');
 		var beforeShowSettings = beforeShow ? beforeShow.apply(input, [input, inst]) : {};
 		if(beforeShowSettings === false){
-            //false
+						//false
 			return;
 		}
 		extendRemove(inst.settings, beforeShowSettings);
@@ -7650,8 +7650,8 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Retrieve the size of left and top borders for an element.
-	   @param  elem  (jQuery object) the element of interest
-	   @return  (number[2]) the left and top borders */
+		 @param  elem  (jQuery object) the element of interest
+		 @return  (number[2]) the left and top borders */
 	_getBorders: function(elem) {
 		var convert = function(value) {
 			return {thin: 1, medium: 2, thick: 3}[value] || value;
@@ -7686,15 +7686,15 @@ $.extend(Datepicker.prototype, {
 	_findPos: function(obj) {
 		var inst = this._getInst(obj);
 		var isRTL = this._get(inst, 'isRTL');
-        while (obj && (obj.type == 'hidden' || obj.nodeType != 1 || $.expr.filters.hidden(obj))) {
-            obj = obj[isRTL ? 'previousSibling' : 'nextSibling'];
-        }
-        var position = $(obj).offset();
-	    return [position.left, position.top];
+				while (obj && (obj.type == 'hidden' || obj.nodeType != 1 || $.expr.filters.hidden(obj))) {
+						obj = obj[isRTL ? 'previousSibling' : 'nextSibling'];
+				}
+				var position = $(obj).offset();
+			return [position.left, position.top];
 	},
 
 	/* Hide the date picker from view.
-	   @param  input  element - the input field attached to the date picker */
+		 @param  input  element - the input field attached to the date picker */
 	_hideDatepicker: function(input) {
 		var inst = this._curInst;
 		if (!inst || (input && inst != $.data(input, PROP_NAME)))
@@ -7851,16 +7851,16 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Set as beforeShowDay function to prevent selection of weekends.
-	   @param  date  Date - the date to customise
-	   @return [boolean, string] - is this date selectable?, what is its CSS class? */
+		 @param  date  Date - the date to customise
+		 @return [boolean, string] - is this date selectable?, what is its CSS class? */
 	noWeekends: function(date) {
 		var day = date.getDay();
 		return [(day > 0 && day < 6), ''];
 	},
 
 	/* Set as calculateWeek to determine the week of the year based on the ISO 8601 definition.
-	   @param  date  Date - the date to get the week for
-	   @return  number - the number of the week within the year that contains this date */
+		 @param  date  Date - the date to get the week for
+		 @return  number - the number of the week within the year that contains this date */
 	iso8601Week: function(date) {
 		var checkDate = new Date(date.getTime());
 		// Find Thursday of this week starting on Monday
@@ -7872,17 +7872,17 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Parse a string value into a date object.
-	   See formatDate below for the possible formats.
+		 See formatDate below for the possible formats.
 
-	   @param  format    string - the expected format of the date
-	   @param  value     string - the date in the above format
-	   @param  settings  Object - attributes include:
-	                     shortYearCutoff  number - the cutoff year for determining the century (optional)
-	                     dayNamesShort    string[7] - abbreviated names of the days from Sunday (optional)
-	                     dayNames         string[7] - names of the days from Sunday (optional)
-	                     monthNamesShort  string[12] - abbreviated names of the months (optional)
-	                     monthNames       string[12] - names of the months (optional)
-	   @return  Date - the extracted date value or null if value is blank */
+		 @param  format    string - the expected format of the date
+		 @param  value     string - the date in the above format
+		 @param  settings  Object - attributes include:
+											 shortYearCutoff  number - the cutoff year for determining the century (optional)
+											 dayNamesShort    string[7] - abbreviated names of the days from Sunday (optional)
+											 dayNames         string[7] - names of the days from Sunday (optional)
+											 monthNamesShort  string[12] - abbreviated names of the months (optional)
+											 monthNames       string[12] - names of the months (optional)
+		 @return  Date - the extracted date value or null if value is blank */
 	parseDate: function (format, value, settings) {
 		if (format == null || value == null)
 			throw 'Invalid arguments';
@@ -8039,32 +8039,32 @@ $.extend(Datepicker.prototype, {
 		Math.floor(1970 / 400)) * 24 * 60 * 60 * 10000000),
 
 	/* Format a date object into a string value.
-	   The format can be combinations of the following:
-	   d  - day of month (no leading zero)
-	   dd - day of month (two digit)
-	   o  - day of year (no leading zeros)
-	   oo - day of year (three digit)
-	   D  - day name short
-	   DD - day name long
-	   m  - month of year (no leading zero)
-	   mm - month of year (two digit)
-	   M  - month name short
-	   MM - month name long
-	   y  - year (two digit)
-	   yy - year (four digit)
-	   @ - Unix timestamp (ms since 01/01/1970)
-	   ! - Windows ticks (100ns since 01/01/0001)
-	   '...' - literal text
-	   '' - single quote
+		 The format can be combinations of the following:
+		 d  - day of month (no leading zero)
+		 dd - day of month (two digit)
+		 o  - day of year (no leading zeros)
+		 oo - day of year (three digit)
+		 D  - day name short
+		 DD - day name long
+		 m  - month of year (no leading zero)
+		 mm - month of year (two digit)
+		 M  - month name short
+		 MM - month name long
+		 y  - year (two digit)
+		 yy - year (four digit)
+		 @ - Unix timestamp (ms since 01/01/1970)
+		 ! - Windows ticks (100ns since 01/01/0001)
+		 '...' - literal text
+		 '' - single quote
 
-	   @param  format    string - the desired format of the date
-	   @param  date      Date - the date value to format
-	   @param  settings  Object - attributes include:
-	                     dayNamesShort    string[7] - abbreviated names of the days from Sunday (optional)
-	                     dayNames         string[7] - names of the days from Sunday (optional)
-	                     monthNamesShort  string[12] - abbreviated names of the months (optional)
-	                     monthNames       string[12] - names of the months (optional)
-	   @return  string - the date in the above format */
+		 @param  format    string - the desired format of the date
+		 @param  date      Date - the date value to format
+		 @param  settings  Object - attributes include:
+											 dayNamesShort    string[7] - abbreviated names of the days from Sunday (optional)
+											 dayNames         string[7] - names of the days from Sunday (optional)
+											 monthNamesShort  string[12] - abbreviated names of the months (optional)
+											 monthNames       string[12] - names of the months (optional)
+		 @return  string - the date in the above format */
 	formatDate: function (format, date, settings) {
 		if (!date)
 			return '';
@@ -8268,11 +8268,11 @@ $.extend(Datepicker.prototype, {
 	},
 
 	/* Handle switch to/from daylight saving.
-	   Hours may be non-zero on daylight saving cut-over:
-	   > 12 when midnight changeover, but then cannot generate
-	   midnight datetime, so jump to 1AM, otherwise reset.
-	   @param  date  (Date) the date to check
-	   @return  (Date) the corrected date */
+		 Hours may be non-zero on daylight saving cut-over:
+		 > 12 when midnight changeover, but then cannot generate
+		 midnight datetime, so jump to 1AM, otherwise reset.
+		 @param  date  (Date) the date to check
+		 @return  (Date) the corrected date */
 	_daylightSavingAdjust: function(date) {
 		if (!date) return null;
 		date.setHours(date.getHours() > 12 ? date.getHours() + 2 : 0);
@@ -8711,9 +8711,9 @@ function isArray(a) {
 };
 
 /* Invoke the datepicker functionality.
-   @param  options  string - a command, optionally followed by additional parameters or
-                    Object - settings for attaching new datepicker functionality
-   @return  jQuery object */
+	 @param  options  string - a command, optionally followed by additional parameters or
+										Object - settings for attaching new datepicker functionality
+	 @return  jQuery object */
 $.fn.datepicker = function(options){
 	
 	/* Verify an empty collection wasn't passed - Fixes #6976 */
@@ -11061,7 +11061,7 @@ $.widget( "ui.tabs", {
 		});
 	},
 
-    _getIndex: function( index ) {
+		_getIndex: function( index ) {
 		// meta-function to give users option to provide a href string instead of a numerical index.
 		// also sanitizes numerical indexes to valid values.
 		if ( typeof index == "string" ) {
