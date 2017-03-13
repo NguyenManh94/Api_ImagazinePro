@@ -4,17 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="78d758c5ad374d51bd7271f73c74b472" Name="Diagram1">
-        <EntityTypeShape EntityType="taptri1994Model.Account" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="taptri1994Model.Comment" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="taptri1994Model.Post" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="taptri1994Model.Promotion" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="taptri1994Model.SCategory" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="taptri1994Model.Traffic" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="taptri1994Model.XCategory" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="taptri1994Model.FK_Post_Account" ManuallyRouted="false" />
-        <AssociationConnector Association="taptri1994Model.FK_Post_SCategory" ManuallyRouted="false" />
-        <AssociationConnector Association="taptri1994Model.FK_SCategory_XCategory" ManuallyRouted="false" />
+      <Diagram DiagramId="e9e5254334f7480aaebceac86ceb1e82" Name="Diagram1">
+        <EntityTypeShape EntityType="MagazineProgramingModel.Account" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazineProgramingModel.Comment" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazineProgramingModel.Post" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazineProgramingModel.Promotion" Width="1.5" PointX="2.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazineProgramingModel.SCategory" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazineProgramingModel.Traffic" Width="1.5" PointX="4.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MagazineProgramingModel.XCategory" Width="1.5" PointX="1.5" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="MagazineProgramingModel.FK_Comment_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazineProgramingModel.FK_Post_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazineProgramingModel.FK_Comment_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazineProgramingModel.FK_Post_SCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="MagazineProgramingModel.FK_SCategory_XCategory" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

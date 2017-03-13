@@ -19,5 +19,8 @@ namespace IMagazineProgramming.Models
         public int IdPost { get; set; }
         public string Content { get; set; }
         public Nullable<System.DateTime> TimeComent { get; set; }
+    
+        public virtual Account Account { get; set; }
+        public virtual Post Post { get; set; }
     }
 }

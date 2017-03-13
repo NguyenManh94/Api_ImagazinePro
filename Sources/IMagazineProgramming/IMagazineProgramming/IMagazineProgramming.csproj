@@ -244,16 +244,6 @@
     <Content Include="Images\Members\username5\avarta-user5.png" />
     <Content Include="Images\Members\username6\avarta-user6.png" />
     <Content Include="Images\Members\username7\avarta-user7.png" />
-    <Content Include="Models\ImgzProg.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ImgzProg.edmx</DependentUpon>
-      <LastGenOutput>ImgzProg.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ImgzProg.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ImgzProg.edmx</DependentUpon>
-      <LastGenOutput>ImgzProg.cs</LastGenOutput>
-    </Content>
     <Content Include="Plugin\AdminTemplate\css\animate.min.css" />
     <Content Include="Plugin\AdminTemplate\css\bootstrap.min.css" />
     <Content Include="Plugin\AdminTemplate\css\calendar\fullcalendar.css" />
@@ -945,8 +935,18 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ImgzProg.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Models\ImgzProg.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImgzProg.edmx</DependentUpon>
+      <LastGenOutput>ImgzProg.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\ImgzProg.edmx.diagram">
       <DependentUpon>ImgzProg.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ImgzProg.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImgzProg.edmx</DependentUpon>
+      <LastGenOutput>ImgzProg.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\taptrilaptrinh - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\taptrilaptrinh - Web Deploy.pubxml" />
@@ -1037,7 +1037,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\Jquery\jquery-2.1.1.min.map" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
